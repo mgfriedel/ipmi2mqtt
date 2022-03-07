@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
+#ipmi2mqtt Config
+config.yaml 
 
 # C extensions
 *.so

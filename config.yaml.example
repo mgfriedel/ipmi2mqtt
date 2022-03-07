@@ -1,0 +1,26 @@
+# Output: higher levels include output from lower levels as well
+#   1: MQTT Connect, Power change request
+#   2: IPMI power/watts status poll output
+# Todo: add more levels
+output: 2
+
+ipmi:
+  # Seconds between IPMI Poll (sensors/etc.)
+  interval: 30
+  # Default login for all devices
+  username: CHANGEME
+  password: CHANGEME
+
+mqtt:
+  # Todo: add TLS/user/pass/etc.
+  host: mqtt.localhost
+  port: 1883
+
+devices:
+  - name: ipmi1
+    host: 127.0.0.1
+  - name: ipmi2
+    host: 127.0.0.1
+    # Override the login for a device if required
+    #username: CHANGEME1
+    #password: CHANGEME1
